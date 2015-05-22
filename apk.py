@@ -29,7 +29,7 @@ import androconf
 import bytecode
 import M2Crypto
 from dvm_permissions import DVM_PERMISSIONS
-from util import get_md5, read
+from util import get_md5, get_sha1, read
 
 NS_ANDROID_URI = 'http://schemas.android.com/apk/res/android'
 
@@ -165,6 +165,7 @@ class APK(object):
         self.cert_text = ""
         self.cert_md5 = ""
         self.file_md5 = ""
+        self.file_sha1 = ""
         self.file_size = ""
 
         self.files = {}
@@ -180,6 +181,7 @@ class APK(object):
         self.zipmodule = zipmodule
         self.file_size = len(self.__raw)
         self.file_md5 = get_md5(self.__raw)
+        self.file_sha1 = get_sha1(self.__raw)
 
         if zipmodule == 0:
             self.zip = ChilkatZip(self.__raw)

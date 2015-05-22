@@ -11,6 +11,7 @@ def test():
     # print apkf.file_md5
     # print apkf.cert_md5
     print apkf.file_size
+    print apkf.file_sha1
     # print apkf.androidversion
     # print apkf.package
     # print apkf.get_android_manifest_xml()

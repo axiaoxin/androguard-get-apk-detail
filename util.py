@@ -26,3 +26,9 @@ def get_md5(buf):
     m = hashlib.md5()
     m.update(buf)
     return m.hexdigest().lower()
+
+
+def get_sha1(buf):
+    s = hashlib.sha1()
+    s.update(buf)
+    return s.hexdigest().lower()
