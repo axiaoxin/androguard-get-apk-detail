@@ -166,7 +166,7 @@ class APK(object):
         self.cert_md5 = ""
         self.file_md5 = ""
         self.file_sha1 = ""
-        self.file_size = ""
+        self.file_size = 0
 
         self.files = {}
         self.files_crc32 = {}
